@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Webcam S3 Upload</title>
+  </head>
+  <body>
+    <div class="booth">
+      <video id="video" width="400" height="300"></video>
+      <a href="#" class="booth-start-button" id="start">Start Webcam</a>
+      <a href="#" class="booth-start-button" id="stop">Stop Webcam</a>
+      <a href="#" class="booth-capture-button" id="capture">Take a photo</a>
+      <a href="#" class="booth-upload-button" id="upload">Upload to S3</a>
+      <canvas class="canvas" id="canvas" width="400" height="300"></canvas>
+      <img
+        id="photo"
+        src="https://placekitten.com/g/400/300"
+        alt="Photo from webcam"
+      />
+    </div>
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.732.0.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
