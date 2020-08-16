@@ -56,6 +56,7 @@ function uploadToS3() {
   s3.putObject(params, function (err, data) {
     if (err) console.error(err);
     console.log(data);
+    alert('Upload to S3 Complete!');
   });
 }
 
@@ -70,4 +71,5 @@ document.getElementById('stop').addEventListener('click', () => {
 document.getElementById('capture').addEventListener('click', () => {
   ctx.drawImage(video, 0, 0, 400, 300);
   photo.setAttribute('src', canvas.toDataURL('image/png'));
+  console.log(canvas.toDataURL('image/png'));
 });
